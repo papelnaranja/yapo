@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>user_id</th>
+      <th>product_id</th>
+      <th>fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @sales.each do |s| %>
+      <tr>
+        <td><%= s.user.name %></td>
+        <td><%= s.product.name %></td>
+        <td><%= s.created_at %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
